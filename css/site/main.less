@@ -291,13 +291,17 @@ ul{
 	list-style: none;
 	counter-reset: item;
 	li{
-		display: flex;
+		//display: flex;
+		//align-items: flex-end;
 		margin-bottom: 30px;
 		font-size: 20px;
 		line-height: 26px;
 		letter-spacing: 0.3px;
 		font-family: @hel-light;
-		align-items: flex-end;
+
+		position: relative;
+		padding-left: 60px;
+
 		@media @media-device{
 			font-size: 16px;
 			line-height: 22px;
@@ -306,16 +310,24 @@ ul{
 			content: counter(item) ". "; 
 			counter-increment: item;
 			display: block;
-			margin-right: 30px;
-			font-size: 50px;
-			line-height: 36px;
+			//margin-right: 30px;
+			//font-size: 50px;
+			//line-height: 36px;
 			color: @aquamarine;
 			font-family: @beau-book;
-			padding-bottom: 3px;
+			//padding-bottom: 3px;
+
+			position: absolute;
+			//top: 50%;
+			left: 0;
+			bottom: 0;
+			transform: translateY(5%);
+			font-size: 40px;
+			line-height: 36px;
 			@media @media-device{
-				margin-right: 20px;
+				/*margin-right: 20px;
 				font-size: 40px;
-				line-height: 26px;
+				line-height: 26px;*/
 			}
 		}
 	}

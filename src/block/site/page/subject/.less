@@ -105,18 +105,28 @@
 		width: 50%;
 	}
 	@media @media-notsmart {		
-		display: flex;
-		align-items: center;
+		//display: flex;
+		//align-items: center;
 		font-size: 22px;
 		line-height: 26px;
 	}
 	@media @media-device {
 		margin-bottom: 30px;
+		position: relative;
 	}
-	@media @media-screen {position: absolute;}
+	@media @media-size-sm{		
+		min-height: 88px;
+		display: flex;
+		align-items: center;		
+		padding-left: 120px;
+	}
+	@media @media-screen {
+		position: absolute;
+		padding-left: 170px;
+	}
 	span{
-		@media @media-notsmart {padding-left: 50px;	}
-		@media @media-size-sm {width: 80%; padding-left: 35px;	}
+		//@media @media-notsmart {padding-left: 50px;	}
+		//@media @media-size-sm {width: 80%; padding-left: 35px;	}
 	}
 	&:before{
 		content: '';
@@ -130,20 +140,27 @@
 			margin: 0 auto 10px;
 		}
 		@media @media-size-sm {
-			width: 20%;
-			max-width: 80px;
+			width: 80px;
 		}
 		@media @media-device {
 			height: 80px;
 			background-size: 80px auto;
-		}
+		}	
+		@media @media-notsmart {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}		
+		    
 	}
 	&.icon-top{
     	@media @media-screen {
+    		width: 410px;
 			top: 0;    
 			left: 50%;
 	    	transform: translateX(-50%);
-    		span{width: 270px;}
+    		//span{width: 270px;}
 	    }
 		&:before{
 			background-position: 0 0;
@@ -151,10 +168,11 @@
 	}
 	&.icon-right{
     	@media @media-screen {
+    		width: 410px;
 		    right: 0;
 	    	top: 50%;
 	    	transform: translateY(-50%);
-	    	span{width: 270px;}
+	    	//span{width: 270px;}
 	    }
 		&:before{
 			background-position: 0 -136px;
@@ -163,10 +181,11 @@
 	}
 	&.icon-bottom{
     	@media @media-screen {
+    		width: 510px;
 			bottom: 0;
 			left: 50%;
 	    	transform: translateX(-50%);
-	    	span{width: 320px;}
+	    	//span{width: 320px;}
 	    }
 		&:before{
 			background-position: 0 -272px;
@@ -175,10 +194,11 @@
 	}
 	&.icon-left{
     	@media @media-screen {
+    		width: 510px;
 			left: 9%;
 			top: 50%;
 			transform: translateY(-50%);
-	    	span{width: 320px;}
+	    	//span{width: 320px;}
 	    }
 		&:before{
 			background-position: 0 -408px;

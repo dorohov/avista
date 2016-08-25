@@ -25,6 +25,7 @@ $('.navbar-site .dropdown').hover(
 		$(this).removeClass('open');
 	}
 );
+//$(".count-list li").contents().wrap('<span></span>');
 $('._ipc__slider').owlCarousel({
 	margin: 0,
 	loop: true,
