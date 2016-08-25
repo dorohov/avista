@@ -1,0 +1,52 @@
+@hel: 			helveticaneuecyr-roman-webfont;
+@hel-med: 		helveticaneuecyr-medium-webfont;
+@hel-bold: 		helveticaneuecyr-bold-webfont;
+@hel-light: 	helveticaneuecyr-light-webfont;
+@din: 			pfdintextcomppro-regular;
+@beau-book: 	pfbeausanspro-book;
+
+@icon: 				Flaticon;
+.include-custom-font(@family: @hel, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src:url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+/*hel*/
+.include-custom-font(@family: @hel, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @hel-med, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @hel-bold, 	@weight: normal, @style: normal);
+.include-custom-font(@family: @hel-light, 	@weight: normal, @style: normal);
+/*end's hel*/
+/*din*/
+.include-custom-font(@family: @din, 		@weight: normal, @style: normal);
+/*end's din*/
+/*beau*/
+.include-custom-font(@family: @beau-book, 	@weight: normal, @style: normal);
+/*end's beau*/
+.include-custom-font(@family: @icon, 			@weight: normal, @style: normal);
+
+@icon-add: 			"\f100";
+@icon-close: 		"\f101";
+@icon-down: 		"\f102";
+@icon-enter: 		"\f103";
+@icon-fb: 			"\f104";
+@icon-left: 		"\f105";
+@icon-location: 	"\f106";
+@icon-mailto: 		"\f107";
+@icon-remove: 		"\f108";
+@icon-right: 		"\f109";
+@icon-search: 		"\f10a";
+@icon-sign: 		"\f10b";
+@icon-tel: 			"\f10c";
+@icon-tick: 		"\f10d";
+@icon-time: 		"\f10e";
+@icon-tw: 			"\f10f";
+@icon-up: 			"\f110";
+@icon-vk: 			"\f111";
+
+.icon-tick{&:before{content: @icon-tick; font-family: @icon;}}
+.icon-remove{&:before{content: @icon-remove; font-family: @icon;}}
+.icon-sign{&:before{content: @icon-sign; font-family: @icon;}}

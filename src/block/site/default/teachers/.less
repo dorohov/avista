@@ -1,0 +1,75 @@
+.teachers-site{
+	position: relative;
+	margin-top: 205px;
+	min-height: 490px;
+	@media @media-size-xs {margin-top: 100px;}
+	@media @media-size-sm {margin-top: 145px;}
+	@media @media-size-lg {margin-top: 170px;}
+	@media @media-screen{background-attachment: fixed!important;}	
+	.container{
+		position: relative;
+		padding-top: 50px;
+		padding-bottom: 40px;
+	}
+} 
+.teachers__heading-site{
+	text-align: center;
+	position: absolute;
+	top: -90px;
+	width: 100%;
+	left: 0;
+	@media @media-device {top: -70px;}
+}
+._ts__heading{
+	font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+	@media @media-device {
+		br{display: none;} 
+	}
+    @media @media-screen{max-width: 670px;}
+}
+._ts__note{
+    @media @media-screen{max-width: 760px;}
+	@media @media-size-lg {max-width: 700px;}	
+}
+._ts__count-list{
+	li{
+		align-items: inherit;
+		margin-bottom: 20px;
+		&:before{
+			line-height: 60px;
+			@media @media-device{
+				line-height: 50px;
+			}
+		}
+	}
+}
+
+// ege teachers
+.ege__teachers{
+	background:  url('@{url-path-img}/teachers/bg-ege.jpg') no-repeat center, linear-gradient(to top,#eff1f5 0,#eff8fa 100%);
+	@media @media-device {
+		background: linear-gradient(to top,#eff1f5 0,#eff8fa 100%);
+	}
+	//opacity: @opacity;
+}
+// admission teachers
+.admission__teachers{
+	background:  url('@{url-path-img}/teachers/bg-admission.jpg') no-repeat center, linear-gradient(to top,#eff1f5 0,#eff8fa 100%);
+	@media @media-device {
+		background: linear-gradient(to top,#eff1f5 0,#eff8fa 100%);
+	}
+	@media @media-screen{min-height: 750px;}	
+	//opacity: @opacity;
+}
+.math__teachers{
+	background:  url('@{url-path-img}/teachers/bg-math.jpg') no-repeat center, linear-gradient(to top,#eff1f5 0,#eff8fa 100%);
+	@media @media-device {
+		background: linear-gradient(to top,#eff1f5 0,#eff8fa 100%);
+	}
+	@media @media-screen{min-height: 720px;}	
+	//opacity: @opacity;
+}

@@ -1,0 +1,120 @@
+.testing-site{
+	background: linear-gradient(to top,#eff1f5 0,#eff8fa 100%);
+	padding: 40px 0;
+	//opacity: 0.7;
+}
+.testing-panel{
+	padding: 8px;
+	background: linear-gradient(to top,#62d4d1 0,#11cea5 100%);
+	margin-bottom: 30px;
+	@media @media-size-xs{
+		max-width: 200px;
+		margin: 0 auto 30px;
+	}
+}
+.testing-panel__inner{
+	padding: 60px;
+	@media @media-size-xs{
+		padding: 20px;
+	}
+	@media @media-size-sm{padding: 30px 30px 20px;}
+	@media @media-size-lg{padding: 55px 40px;}
+	background: @white;
+}
+.testing-panel__cols{
+	width: 20%;
+	@media @media-size-xs{
+		width: 100%;
+		padding-top: 30px;
+		&:first-child{padding-top: 0} 
+	}
+	position: relative;
+	&:first-child{&:before{display:none;}}
+	&:before{
+		content: '';
+		width: 24px;
+		height: 24px;
+		display: block;
+		position: absolute;
+		top: 30%;
+		left: 0;
+		transform: translateY(-50%);
+		background-image: url('@{url-path-img}/default/marker-green.png');
+		background-repeat: no-repeat;
+		@media @media-size-xs{
+		    width: 14px;
+			height: 14px;
+			background-size: 14px;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%) rotate(90deg);
+		}
+		@media @media-size-sm{
+			left: -10px;
+			background-size: 16px;
+			width: 16px;
+			height: 16px;
+		}
+		@media @media-size-lg{left: -10px;}
+	}
+}
+.testing-panel__item{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	margin-bottom: 15px;
+	@media @media-device{
+		font-size: 13px;
+		line-height: 18px;
+	}
+	@media @media-size-lg{
+		font-size: 16px;
+		line-height: 20px;
+	}
+	&:before{
+		content: '';
+		background-image: url('@{url-path-img}/testing/bg-icon.png');
+		background-repeat: no-repeat;
+		display: block;
+		margin: 0 auto 20px;
+		width: 176px;
+		height: 145px;
+		@media @media-size-xs{
+			width: 80px;
+			height: 66px;
+			background-size: 80px auto;
+			margin: 0 auto 10px;
+		}
+		@media @media-size-sm{
+			width: 100px;
+			height: 82px;
+			background-size: 100px auto;
+		}
+	}
+	&.icon-theory:before{background-position: 0 0px}
+	&.icon-lesson:before{
+		background-position: 0 -145px;
+		@media @media-size-xs{background-position: 0 -66px;}
+		@media @media-size-sm{background-position: 0 -82px;}
+	}
+	&.icon-exercise:before{
+		background-position: 0 -290px;
+		@media @media-size-xs{background-position: 0 -132px;}
+		@media @media-size-sm{background-position: 0 -164px;}
+	}
+	&.icon-screening:before{
+		background-position: 0 -434px;
+		@media @media-size-xs{background-position: 0 -197px;}
+		@media @media-size-sm{background-position: 0 -246px;}
+	}
+	&.icon-simulation:before{
+		background-position: 0 -578px;
+		@media @media-size-xs{background-position: 0 -262px;}
+		@media @media-size-sm{background-position: 0 -328px;}
+	}
+}
+
+
+.math__testing{}

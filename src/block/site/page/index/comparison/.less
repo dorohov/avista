@@ -1,0 +1,104 @@
+._ipc__comparison{
+	//opacity: @opacity;
+    max-width: 1290px;
+    margin: 0 auto 30px;
+}
+._ipc__comparison-block{
+	@media @media-screen{
+		background: linear-gradient(to left,#62d4d1 0,#11cea5 100%);
+		padding: 15px;
+	}
+}
+._ipc__comparison-inner{
+	@media @media-screen{
+		background: linear-gradient(to top,#f4f4f4 0,#ffffff 100%);
+		padding: 10px 0;
+	}
+}
+._ipc__comparison-table{
+	width: 100%;
+	.active{
+		border: 2px solid #dcdcdc;
+		border-top: 0;
+		border-bottom: 0;
+	}
+	.logotip{
+		img{margin: 0 auto;}
+		margin-bottom: 20px;
+	}
+	.icon{
+		&:before{
+			font-weight: bold;
+			font-size: 16px;
+			margin: 0 3px;
+		}
+	}
+	tr{
+		&:first-child{
+			.active{border-top: 2px solid #dcdcdc;}
+			td{
+				&:nth-child(1){padding: 22px 35px}
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4){vertical-align: bottom; text-align: center;}
+				@media @media-size-xs {
+					&:nth-child(1){padding: 20px 25px;}
+				}
+			}
+		}
+		&:last-child{
+			td{
+				background: #f4f4f4; 
+				font-size: 18px;
+				font-family: @hel-med;
+			}	
+			.active{border-bottom: 2px solid #dcdcdc;}
+		}
+		&:nth-child(2n+2){
+			td{background: #f4f4f4;}
+		}
+		td{
+			padding: 25px 20px;
+			font-size: 16px;
+			line-height: 20px;
+			font-family: @hel-light;
+			letter-spacing: 0.5px;
+			background: @white;
+			text-align: center;
+			&:nth-child(1){width: 33%; padding: 20px 35px; text-align: left;}
+			&:nth-child(2){width: 31%; color: @green-dark;}
+			&:nth-child(3){width: 16%; color: @aquamarine-mod;}
+			&:nth-child(4){width: 20%; color: @gray-blue-light;}
+			@media @media-size-xs {
+				&:nth-child(1){padding: 20px 25px;}
+			}
+		}
+	}
+	@media @media-device{
+		border: 10px solid #11cea5;	
+		tr {
+			/*&:first-child{
+				td{
+					&:nth-child(1){white-space: nowrap;}
+				}
+			}*/
+			th,
+			td {
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4){white-space: nowrap;}
+			}
+		}				
+	}
+}
+._ipc__comparison-table-heading{
+	font-family: @din;
+	font-size: 46px;
+    line-height: 40px;
+	color: @aquamarine;
+	@media @media-device {
+		font-size: 22px;
+		line-height: 28px;
+		text-transform: uppercase;
+	}
+} 

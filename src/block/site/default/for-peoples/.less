@@ -1,0 +1,71 @@
+.for-peoples-site{
+	margin-top: 105px;
+	position: relative;
+	min-height: 490px;
+	@media @media-size-xs {min-height: 300px;}
+	//@media @media-screen{background-attachment: fixed!important;}
+	.container{
+		position: relative;
+		padding-top: 50px;
+		padding-bottom: 40px;
+	}
+	.table-responsive{margin-top: -160px;}
+} 
+// ege for-peoples
+.ege__for-peoples{
+	background:  url('@{url-path-img}/for-peoples/bg-ege.jpg') no-repeat center top;
+	//opacity: @opacity;
+
+	@media @media-device {
+    	background-size: cover!important;
+    	background-position: right top;
+	}
+}
+// ege for-peoples
+.subject__for-peoples{
+	background: #eef6f8 url('@{url-path-img}/for-peoples/bg-subject.jpg') no-repeat right bottom;
+	background-size: cover!important;
+	min-height: 660px;
+	@media @media-size-xs {min-height: 300px;}
+	@media @media-device {
+    	background-position: right top;
+	}
+	@media @media-screen{
+		background-attachment: fixed!important; 
+	}
+}
+._fps__comparison-block{
+	@media @media-screen{
+		background: linear-gradient(to top,#62d4d1 0,#11cea5 100%);
+		padding: 7px;    
+   		margin: 0px auto 0;
+	}
+	@media @media-size-xxl{max-width: 1295px;}
+}
+._fps__comparison-inner{
+	background-color: @white;
+}
+._fps__comparison-table{
+	width: 100%;
+	text-align: center;
+	@media @media-device{
+		border: 10px solid #11cea5;	
+	}
+	tr{
+		td{
+			padding: 23px 25px;
+			background: @white;
+			font-size: 24px;
+			line-height: 26px;
+			width: 50%;
+			@media @media-size-xs{white-space: nowrap;}
+			@media @media-device{
+				font-size: 18px;
+				line-height: 20px;
+			}
+		}
+		&:nth-child(2n+2){
+			td{background: #f4f4f4;}
+		}
+	}
+}

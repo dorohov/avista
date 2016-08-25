@@ -1,0 +1,240 @@
+.form-site{
+	//opacity: @opacity;
+	//min-height: 810px;
+	position: relative;
+	//margin-top: 30px;
+	padding-bottom: 191px;
+	color: @white;
+	&:before{background: @green-brilliant;}
+	&:after{opacity: 0.14;}
+	&:before,
+	&:after{		
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	&.item1{
+		&:after{
+			background: url('@{url-path-img}/bg/bg-form1.jpg') no-repeat top center; 
+		}		
+	}
+	&.item2{
+		&:after{
+			background: url('@{url-path-img}/bg/bg-form2.jpg') no-repeat top center; 
+		}		
+	}
+	&.item3{
+		
+		&:after{
+			background: url('@{url-path-img}/bg/bg-form3.jpg') no-repeat top center; 
+		}		
+	}
+    @media @media-size-xs{
+    	padding-top: 30px;
+    	margin-top: 0;
+    	&:after{background-size: cover!important;}
+    }
+}
+.form-site__inner{
+	position: relative;
+	z-index: 2;
+}
+._frms__tabs-list{
+	margin: 0 auto 35px;    
+    padding: 0;
+    list-style: none;
+    display: flex;
+   	justify-content: center;
+    position: relative;
+    top: -30px;
+    @media @media-size-xs{
+    	flex-wrap: wrap;
+    	top: 0;
+    	margin-bottom: 10px;
+    }
+    @media @media-size-sm{top: -20px;}
+    //@media @media-screen{width: 1200px;}
+	li{
+		a{
+			display: block;
+			background: @white;
+			border: 2px solid @green-brilliant;
+			color: @aquamarine;
+			font-family: @hel-med;
+			text-transform: uppercase;
+			font-size: 20px;
+			line-height: 55px;
+			padding: 0 15px;
+			text-align: center;
+			border-radius: 50px;
+			letter-spacing: 1px;
+			width: 400px;
+			transition: @transition-site;
+			@media @media-size-xs{
+				width: 100%;
+				font-size: 14px;
+				line-height: 32px;
+				margin-bottom: 20px;
+			}
+			@media @media-size-sm{
+				font-size: 14px;
+				line-height: 35px;
+				width: 260px;
+			}
+		}
+		&.active{
+			a{
+				background: @green-light;
+				color: @white;
+			}
+		}
+	}
+}
+._frms__tabs-content{
+	margin: 0 auto;
+	@media @media-size-xs{padding: 0 20px; max-width: 400px;}
+	@media @media-size-sm{width: 500px;}
+	@media @media-screen{
+		width: 570px; 
+		min-height: 490px;
+	}
+}
+._frms__input{
+	margin-bottom: 30px;
+}
+._frms__form-control{
+	background: @white;
+	border: 1px solid @white;    
+	height: 50px;
+    padding: 10px 25px;
+	font-size: 18px;
+	line-height: 30px;
+	color: @green-brilliant;
+	transition: @transition-site;
+    &:-moz-placeholder{
+		color: @green-brilliant;
+		font-size: 18px;
+		line-height: 30px;
+		letter-spacing: 1px;
+		transition: @transition-site;
+    }
+	&::-webkit-input-placeholder {
+		color: @green-brilliant;
+		font-size: 18px;
+		line-height: 30px;
+		letter-spacing: 1px;
+		transition: @transition-site;
+	}
+	@media @media-size-xs{
+		height: 36px;
+		font-size: 14px;
+		line-height: 26px;
+    	padding: 6px 15px;
+	    &:-moz-placeholder{
+			font-size: 14px;
+			line-height: 26px;
+	    }
+		&::-webkit-input-placeholder {
+			font-size: 14px;
+			line-height: 26px;
+		}
+	}
+	&:focus{
+		border: 1px solid @green-brilliant;
+		outline: none;	
+		color: lighten(@black, 30%);
+	    &:-moz-placeholder{
+			color: lighten(@black, 30%);
+	    }
+		&::-webkit-input-placeholder {
+			color: lighten(@black, 30%);
+		}
+	}
+}
+
+._czr__frms__input{
+	.checkbox,
+	.radio {
+		margin: 0;
+		.cr{
+			position: relative;
+			display: inline-block;
+			border: 1px solid #7fa8b3;
+			background: @white;
+			width: 20px;
+			height: 20px;
+			float: left;
+			margin-right: 25px;
+			.cr-icon {
+				position: absolute;
+				font-size: .8em;
+				line-height: 0;
+				top: 50%;
+				left: 20%;
+			}
+		}
+		label{
+			padding: 0;
+			&:after{
+				content: '';
+				display: table;
+				clear: both;		
+			}
+		}
+
+	}
+
+	.radio {
+		.cr {
+	    	.cr-icon {
+			    margin-left: 0.04em;
+			}
+		}
+	}
+
+	.checkbox label input[type="checkbox"],
+	.radio label input[type="radio"] {
+	    display: none;
+		& + .cr{
+	    	&  > .cr-icon {
+			    transform: scale(3) rotateZ(-25deg);
+			    opacity: 0;
+			    transition: all .3s ease-in;
+			}
+	    }
+		& ~ .text{
+			transition: all .3s ease-in;
+		}
+	    &:checked {
+	    	& + .cr{ 
+		    	border-color: @green-brilliant; 
+		    	&  > .cr-icon {
+					transform: scale(1) rotateZ(0deg);
+					opacity: 1;
+				}
+		    }
+	    }
+	    &:disabled {
+	    	& + .cr{
+				opacity: .5;
+			}
+		}
+	}
+	.cr-icon{
+		&.icon-ok{
+			&:before{
+				font-family: @icon;
+				content: @icon-tick;
+				display: block;
+				color:  @green-brilliant;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-20%,-50%);
+			}
+		}
+	}
+}
