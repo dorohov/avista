@@ -1,0 +1,107 @@
+.contacts-page-content{
+	padding: 30px 0;
+}
+._cpc__row{
+	@media @media-device{flex-wrap: wrap;}
+}
+._cpc__cols-left{
+	@media @media-device{
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	@media @media-screen {
+		padding-top: 20px;
+		width: 57%;		
+	}
+}
+._cpc__cols-right{
+	width: 43%;
+	@media @media-device{
+		width: 100%;
+		margin-bottom: 25px;
+	}
+}
+#yandex-map{
+	//opacity: @opacity;
+	height: 710px;
+	position: relative;
+    @media @media-size-xs-p{height: 550px;}
+    @media @media-size-xs-l{height: 400px;}
+	.container{
+		position: relative;
+	}
+}
+._cpc__address{
+	padding: 7px;
+	//opacity: 0.7;
+	z-index: 100;
+	background: linear-gradient(to left,#11cea5 0, #62d4d1 100%);
+	@media @media-screen{
+		position: absolute;
+		width: 640px;
+		top: 40px;
+   		left: 15px;
+	}
+}
+._cpc__address-inner{
+	padding: 35px 30px;
+	background: @white;
+    @media @media-size-xs{
+    	padding: 35px 20px;
+    }
+}
+._cpc__item{
+	margin-bottom: 25px;    
+	font-size: 20px;
+    line-height: 26px;
+    @media @media-size-xs{
+		font-size: 16px;
+    	line-height: 20px;
+    	text-align: center;
+    }
+	&:last-child{margin-bottom: 0}
+	> div{
+    	@media @media-notsmart{padding-left: 55px;}
+	}
+	a{
+		&[href^="tel:"]{color: @b-color;}
+		&[href^="maito:"]{
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	span{
+		color: @aquamarine-mod;
+		font-family: @hel-med;
+	}
+}
+._cpc__icon{
+	position: relative;    
+    @media @media-notsmart{padding-left: 55px;}
+	&:before{
+		font-family: @icon;
+		display: block;
+		width: 27px;
+		line-height: 27px;
+		text-align: center;
+		background: @aquamarine-mod;
+		color: @white;
+		font-size: 16px;
+		border-radius: 50%;
+    	@media @media-size-xs{
+    		margin: 0 auto 10px;
+    	}
+    	@media @media-notsmart{
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+    	}
+	}
+	&.icon-tel:before{content: @icon-tel}
+	&.icon-mailto:before{content: @icon-mailto}
+	&.icon-location:before{content: @icon-location}
+	&.icon-time:before{content: @icon-time}
+}

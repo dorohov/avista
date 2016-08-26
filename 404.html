@@ -31,9 +31,7 @@
 <link href="/css/site.css" rel="stylesheet"> 
 	</head>
 	<body>	
-		<div class="body-inner second">
-
-			<nav class="navbar navbar-site navbar-second">
+ 		<nav class="navbar navbar-site navbar-index">
 	<div class="navbar-header">
 		<div class="container">
 			<div class="row navbar-header__row ">
@@ -116,7 +114,7 @@
 								<li><a href="/about.html">О компании</a></li>
 								<li><a href="/blog.html">Блог</a></li>
 								<li><a href="/contacts.html">Контакты</a></li>
-								<li><a href="/faq.html">Вопрос-ответ</a></li>
+								<li><a href="/docs.html">Документы</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -133,70 +131,51 @@
 	</div>
 
 </nav>                                                                                                               
-
-			<div class="error-page-content content-site second">
+		
+		<div class="error-page-content content-site">
 	<div class="container">			
 		<h1 class="heading-site">Страница не найдена!</h1>
-		<div>К сожалению, страница, которую вы ищите, не существует.</div>
-		<div><a href="/">Перейти на главную страницу</a></div>
+		<div class="_epc__note text-block">
+			<div>Простите, я не могу найти эту страницу. Возможно вы неправильно набрали адрес, или такой страницы в моей базе данных больше не существует.</div>
+			<div>Перейти на <a href="/">главную</a> страницу</div>
+		</div>
 	</div>
 </div> 
 
-		</div>
-		
-		
-
-		<div class="modal fade" id="modal-enter" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content  _me__content">
-			<div class="modal-body _me__body">
-				<div class="_me__block">
-					<div class="_me__heading">
-						<h4 class="modal-title _me__title">Вход в ServiceDesk</h4>
-						<button type="button" class="btn-site btn-close modal-btn-close" data-dismiss="modal" aria-hidden="true"></button>
-					</div>
-					<form class="_me__form" action="#"> 
-						<div class="_me__form-item">
-							<input type="text" class="form-control _me__form-control" placeholder="Логин">
-						</div>
-						<div class="_me__form-item pass">
-							<input type="password" class="form-control _me__form-control" placeholder="Пароль">
-							<a href="#" id="getModal" class="_me__form-pass">Забыли пароль</a>
-						</div>
-						<div  class="_me__form-btn">
-							<button type="button" class="btn-site btn-line btn-white big">Войти</button>
-						</div>
-					</form>			
-					
-				</div>
+		<footer class="footer-site green-opacity">
+	<div class="container">
+		<div class="row _fs__navbar-row">
+			<div class="cols _fs__logotip-cols">
+				<div><a href="/"><img src="/img/default/logotip-white.png" alt=""></a></div>
+			</div>
+			<div class="cols _fs__navbar-cols">
+				<ul class="_fs__navbar">
+					<li><a href="/docs.html">Документы</a></li>
+					<li><a href="/ege.html">ЕГЭ 2017</a></li>
+					<li><a href="/oge.html">ОГЭ 2017</a></li>
+					<li><a href="/admission.html">Поступление на бюджет</a></li>
+					<li><a href="/teachers.html">Преподаватели</a></li>	
+					<li><a href="/contacts.html">Контакты</a></li>
+				</ul>          
 			</div>
 		</div>
-	</div>
-</div>
-		
-		<div class="modal fade" id="modal-pass" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content  _me__content">
-			<div class="modal-body _me__body">
-				<div class="_me__block">
-					<div class="_me__heading">
-						<h4 class="modal-title _me__title">Восстановление пароля</h4>
-						<button type="button" class="btn-site btn-close modal-btn-close" data-dismiss="modal" aria-hidden="true"></button>
+		<div class="row _fs__copyright-row">
+			<div class="cols _fs__copyright-cols ">
+				<div>&copy; 2016. «АВИСТА». Все права защищены.</div>	
+				<div>Орёл, ул. Комсомольская, д. 61, 2 этаж, офис 211</div>		
+			</div>	
+			<div class="cols _fs__dorohovdesign-cols">
+				<div class="row">
+					<div class="cols">
+						<a href="http://www.dorohovdesign.ru/" target="_blank">Сайт разработан в</a></div>
+					<div class="cols">
+						<a href="http://www.dorohovdesign.ru/" target="_blank"><img src="/img/default/dorohovdesign-white.png" alt="" ></a>
 					</div>
-					<form class="_me__form" action="#"> 
-						<div class="_me__form-item">
-							<input type="email" class="form-control _me__form-control" placeholder="Введите ваш e-mail">
-						</div>
-						<div  class="_me__form-btn">
-							<button type="button" class="btn-site btn-line btn-white big">Восстановить</button>
-						</div>
-					</form>			
-					
-				</div>
-			</div>
+				</div>				
+			</div>	
 		</div>
 	</div>
-</div>
+</footer> 		
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

@@ -125,6 +125,34 @@ h6{
 		}
 	} 
 }
+.link-next{
+	padding-top: 25px;
+	text-decoration: underline;
+    letter-spacing: 0.5px;
+	a{
+		display: inline-block;
+		position: relative;
+		padding-left: 35px;
+		text-decoration: underline;
+		transition: @transition-site;
+		&:before{
+			font-family: @icon;
+			content: @icon-enter;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%) translateX(0px);
+			font-size: 24px;
+			transition: @transition-site;
+		}
+		&:hover{
+			text-decoration: none;
+			&:before{
+				transform: translateY(-50%) translateX(-5px);
+			}
+		}
+	} 
+}
 .header-site{
 	.heading-site{
 		font-family: @din;  

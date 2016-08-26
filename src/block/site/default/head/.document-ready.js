@@ -61,7 +61,8 @@ $('.teachers-list').owlCarousel({
 var left = 0, top = 0, 
 	element = $('.parallax__for-peoples'),
 	element1 = $('.header-site');
-if(element.length && element1.length){
+	
+if(element1.length){
 	var offset =  { left: element.offset().left, top: element.offset().top };
 	element.bind('mousemove', function(e){
 		left = (e.pageX-offset.left);

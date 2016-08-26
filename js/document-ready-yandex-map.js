@@ -5,91 +5,21 @@ $(function() {
 	var yam = $('#yandex-map');
 	
 	var _m_center = {		
-		center: [52.965000, 36.084000], // расположение района
-		zoom: 16,
-		styles: [
-			  {
-			    "featureType": "landscape.man_made",
-			    "elementType": "geometry.fill",
-			    "stylers": [
-			      { "color": "#dce4e9" }
-			    ]
-			  },{
-			    "featureType": "poi",
-			    "elementType": "geometry.fill",
-			    "stylers": [
-			      { "color": "#eaeff2" }
-			    ]
-			  },{
-			    "featureType": "landscape.man_made",
-			    "elementType": "geometry.stroke",
-			    "stylers": [
-			      { "color": "#f0f6f9" }
-			    ]
-			  },{
-			    "featureType": "road.highway",
-			    "elementType": "geometry.fill",
-			    "stylers": [
-			      { "color": "#9db6ca" }
-			    ]
-			  },{
-			    "featureType": "road.highway",
-			    "elementType": "geometry.stroke",
-			    "stylers": [
-			      { "color": "#819dae" }
-			    ]
-			  },{
-			    "featureType": "road.highway",
-			    "elementType": "labels.text.fill",
-			    "stylers": [
-			      { "color": "#2d3d4d" }
-			    ]
-			  },{
-			    "featureType": "road.arterial",
-			    "elementType": "labels.text.fill",
-			    "stylers": [
-			      { "color": "#000000" }
-			    ]
-			  },{
-			    "featureType": "road.local",
-			    "elementType": "labels.text.fill",
-			    "stylers": [
-			      { "color": "#000000" }
-			    ]
-			  },{
-			    "featureType": "water",
-			    "elementType": "geometry.fill",
-			    "stylers": [
-			      { "color": "#cadbe9" }
-			    ]
-			  },{
-			    "featureType": "water",
-			    "elementType": "labels.text.fill",
-			    "stylers": [
-			      { "color": "#576773" }
-			    ]
-			  },{
-			    "featureType": "transit.station",
-			    "elementType": "labels.text.fill",
-			    "stylers": [
-			      { "color": "#000000" }
-			    ]
-			  }
-			]
+		center: [52.95464, 36.0620], // расположение района
+		zoom: 18
 	};
-	/*
-	if($(document).width() < 768) {
+	
+	if($(document).width() < 1025) {
 		_m_center = {
-			center: [52.966000, 36.080500], // расположение района
-			zoom: 15,
+			center: [52.9545, 36.0640], // расположение района
+			zoom: 17
 		}
 	} else {
 		_m_center = {
-			center: [52.965000, 36.084000], // расположение района
-			zoom: 16,
+			center: [52.95464, 36.0620], // расположение района
+			zoom: 18
 		}		
 	}
-	*/	
 	
 	var myMap;
 	
@@ -98,9 +28,8 @@ $(function() {
 		myMap = new ymaps.Map('yandex-map', _m_center, {
 			searchControlProvider: 'yandex#search'
 		});
-				
-		var firm_office = new ymaps.Placemark([52.96562, 36.080339], {
-			hintContent: 'ООО «Энкомсервис»'
+		var firm_office = new ymaps.Placemark([52.954791, 36.063988], {
+			hintContent: 'Учебный центр «Ависта»'
 		}, {
 			iconLayout: 'default#image',
 			iconImageHref: '/img/default/icon-map.png',
