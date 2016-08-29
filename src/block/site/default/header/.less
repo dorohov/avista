@@ -1,28 +1,16 @@
 .header-site{	
 	position: relative;
 	background-repeat: no-repeat;
-	background-position: top center;
+	background-position: 0 top;
+	background-size: cover;
+	transition: 0.15s all linear;
+	@media @media-size-sm {background-position: right top;}
+	@media @media-size-sm-p{background-position: 60% top;}	
 	&.icons{
 		margin-bottom: 160px;
 		@media @media-size-xs {margin-bottom: 35px;}
 		@media @media-size-sm {margin-bottom: 105px;}
 		@media @media-size-lg {margin-bottom: 130px;}
-	}
-	@media @media-size-xs {
-    	background-size: cover;
-	}
-	@media @media-size-sm {
-    	background-size: cover;
-    	background-position: right top;
-	}
-	@media @media-size-sm-p{background-position: 85% top;}
-	@media @media-size-lg {
-    	background-size: cover;
-    	background-position: top right;
-	}
-	@media @media-size-xl{
-    	background-size: cover;
-    	background-position: top right;
 	}
 	.container{
 		position: relative;
@@ -73,7 +61,6 @@
 	    right: 15px;    	
     }
 	@media @media-size-sm {bottom: -80px;}	
-	@media @media-size-lg {bottom: -100px;}	
 }
 ._hs__icon-item{
 	@media @media-size-xs {margin-bottom: 25px;}

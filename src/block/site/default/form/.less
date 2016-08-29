@@ -6,7 +6,7 @@
 	padding-bottom: 191px;
 	color: @white;
 	&:before{background: @green-brilliant;}
-	&:after{opacity: 0.14;}
+	&:after{opacity: 0.14; background-size: cover!important;}
 	&:before,
 	&:after{		
 		position: absolute;
@@ -26,8 +26,7 @@
 			background: url('@{url-path-img}/bg/bg-form2.jpg') no-repeat top center; 
 		}		
 	}
-	&.item3{
-		
+	&.item3{		
 		&:after{
 			background: url('@{url-path-img}/bg/bg-form3.jpg') no-repeat top center; 
 		}		
@@ -35,7 +34,6 @@
     @media @media-size-xs{
     	padding-top: 30px;
     	margin-top: 0;
-    	&:after{background-size: cover!important;}
     }
 }
 .form-site__inner{
@@ -154,7 +152,10 @@
 		}
 	}
 }
-
+textarea._frms__form-control{
+	height: 150px;
+	max-height: 150px;
+}
 ._czr__frms__input{
 	.checkbox,
 	.radio {

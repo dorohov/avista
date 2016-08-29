@@ -51,9 +51,7 @@
 							<button type="button" class="btn-site btn-line btn-rad btn-aquamarine" data-toggle="modal" data-target="#modal-activity">Бесплатное занятие</button>
 						</div>
 						<div class="cols">
-							<button type="button" class="btn-site btn-line btn-rad btn-aquamarine" data-toggle="modal" data-target="#modal-enroll">
-								Записаться на курсы 
-							</button>
+							<button type="button" class="btn-site btn-line btn-rad btn-aquamarine" data-toggle="modal" data-target="#modal-enroll">Записаться на курсы</button>
 						</div>
 						<div class="cols">
 							<button type="button" class="btn-site btn-line btn-rad btn-aquamarine" data-toggle="modal" data-target="#modal-consultation">Получить консультацию</button>
@@ -64,12 +62,19 @@
 						</div>
 					</div>
 				</div>	
-				<div class="cols navbar-hamburger__cols">
-					<a href="#" class="hamburger hamburger--emphatic" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+				<!--<div class="cols navbar-hamburger__cols">
+					<button type="button" class="hamburger hamburger--emphatic" data-toggle-nav=".navbar-site">
 						<div class="hamburger-box">
 							<div class="hamburger-inner"></div>
 						</div>
-					</a>					
+					</button>					
+		        </div>-->
+		        <div class="cols navbar-hamburger__cols">
+					<button class="hamburger hamburger--emphatic" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</button>					
 		        </div>
 	        </div>
         </div>
@@ -235,7 +240,7 @@
 
 		  
 
-		<div class="form-site item1">
+		<div class="form-site item2">
 	<div class="form-site__inner">
 		<ul class="_frms__tabs-list">
 			<li class="active"><a href="#form-sign" data-toggle="tab">Записаться на курс</a></li>
@@ -244,59 +249,59 @@
 		<div class="tab-content _frms__tabs-content">
 			<div class="tab-pane fade in active" id="form-sign">
 				<form action="#">
-					<div class="_frms__input">
-						<input type="text" class="_frms__form-control form-control" id="" placeholder="*ФИО">
-					</div>	
-					<div class="_frms__input">
-						<input type="email" class="_frms__form-control form-control" id="" placeholder="*E-mail">
-					</div>	
-					<div class="_frms__input">
-						<input type="tel" class="_frms__form-control form-control" id="" placeholder="*Телефон">
-					</div>	
-					<div class="_frms__input _czr__frms__input">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox">
-								<span class="cr"><i class="cr-icon icon-ok"></i></span>
-								<span class="text">Да, я даю согласие на обработку персональных данных</span> 
-							</label>
-						</div>
-					</div>	
-					<div class="_frms__input">
-						<img src="/img/default/notrobot.jpg" alt="">
-					</div>	
-					<div class="_frms__input">
-						<button type="submit" class="btn-site btn-line big btn-white">Отправить</button>
-					</div>	
-				</form>
+	<div class="_frms__input">
+		<input type="text" class="_frms__form-control form-control" id="" placeholder="*ФИО">
+	</div>	
+	<div class="_frms__input">
+		<input type="email" class="_frms__form-control form-control" id="" placeholder="*E-mail">
+	</div>	
+	<div class="_frms__input">
+		<input type="tel" class="_frms__form-control form-control" id="" placeholder="*Телефон">
+	</div>	
+	<div class="_frms__input _czr__frms__input">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">
+				<span class="cr"><i class="cr-icon icon-ok"></i></span>
+				<span class="text">Да, я даю согласие на обработку персональных данных</span> 
+			</label>
+		</div>
+	</div>	
+	<div class="_frms__input">
+		<img src="/img/default/notrobot.jpg" alt="">
+	</div>	
+	<div class="_frms__input">
+		<button type="submit" class="btn-site btn-line big btn-white">Отправить</button>
+	</div>	
+</form> 
 			</div>
-			<div class="tab-pane fade" id="form-consultation">
+			<div class="tab-pane fade" id="form-consultation">				
 				<form action="#">
-					<div class="_frms__input">
-						<input type="text" class="_frms__form-control form-control" id="" placeholder="*ФИО">
-					</div>	
-					<div class="_frms__input">
-						<input type="email" class="_frms__form-control form-control" id="" placeholder="*E-mail">
-					</div>	
-					<div class="_frms__input">
-						<input type="tel" class="_frms__form-control form-control" id="" placeholder="*Телефон">
-					</div>	
-					<div class="_frms__input _czr__frms__input">
-						<div class="checkbox">
-							<label>
-								<input type="checkbox">
-								<span class="cr"><i class="cr-icon icon-ok"></i></span>
-								<span class="text">Да, я даю согласие на обработку персональных данных</span> 
-							</label>
-						</div>
-					</div>	
-					<div class="_frms__input">
-						<img src="/img/default/notrobot.jpg" alt="">
-					</div>	
-					<div class="_frms__input">
-						<button type="submit" class="btn-site btn-line big btn-white">Отправить</button>
-					</div>	
-				</form>
+	<div class="_frms__input">
+		<input type="text" class="_frms__form-control form-control" id="" placeholder="*ФИО">
+	</div>	
+	<div class="_frms__input">
+		<input type="email" class="_frms__form-control form-control" id="" placeholder="*E-mail">
+	</div>	
+	<div class="_frms__input">
+		<textarea class="_frms__form-control form-control" placeholder="*Ваш вопрос"></textarea>
+	</div>	
+	<div class="_frms__input _czr__frms__input">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">
+				<span class="cr"><i class="cr-icon icon-ok"></i></span>
+				<span class="text">Да, я даю согласие на обработку персональных данных</span> 
+			</label>
+		</div>
+	</div>	
+	<div class="_frms__input">
+		<img src="/img/default/notrobot.jpg" alt="">
+	</div>	
+	<div class="_frms__input">
+		<button type="submit" class="btn-site btn-line big btn-white">Отправить</button>
+	</div>	
+</form> 
 			</div>
 		</div>
 	</div>
@@ -336,7 +341,128 @@
 			</div>	
 		</div>
 	</div>
-</footer> 		
+</footer> 
+		
+		<div class="modal fade" id="modal-enroll" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content _mf__content">
+			<div class="modal-body _mf__body" >
+				<div class="modal-block">
+					<div class="modal-heading"> 
+						<h3 class="modal-title">Записаться на курсы</h3>
+						<button type="button" class="_mf__btn-close btn-site btn-close modal-btn-close" data-dismiss="modal" aria-hidden="true"></button>
+					</div>					
+					<form action="#">
+	<div class="_frms__input">
+		<input type="text" class="_frms__form-control form-control" id="" placeholder="*ФИО">
+	</div>	
+	<div class="_frms__input">
+		<input type="email" class="_frms__form-control form-control" id="" placeholder="*E-mail">
+	</div>	
+	<div class="_frms__input">
+		<input type="tel" class="_frms__form-control form-control" id="" placeholder="*Телефон">
+	</div>	
+	<div class="_frms__input _czr__frms__input">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">
+				<span class="cr"><i class="cr-icon icon-ok"></i></span>
+				<span class="text">Да, я даю согласие на обработку персональных данных</span> 
+			</label>
+		</div>
+	</div>	
+	<div class="_frms__input">
+		<img src="/img/default/notrobot.jpg" alt="">
+	</div>	
+	<div class="_frms__input">
+		<button type="submit" class="btn-site btn-line big btn-white">Отправить</button>
+	</div>	
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+		<div class="modal fade" id="modal-consultation" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content _mf__content">
+			<div class="modal-body _mf__body" >
+				<div class="modal-block">
+					<div class="modal-heading"> 
+						<h3 class="modal-title">Получить консультацию</h3>
+						<button type="button" class="_mf__btn-close btn-site btn-close modal-btn-close" data-dismiss="modal" aria-hidden="true"></button>
+					</div>	
+					<form action="#">
+	<div class="_frms__input">
+		<input type="text" class="_frms__form-control form-control" id="" placeholder="*ФИО">
+	</div>	
+	<div class="_frms__input">
+		<input type="email" class="_frms__form-control form-control" id="" placeholder="*E-mail">
+	</div>	
+	<div class="_frms__input">
+		<textarea class="_frms__form-control form-control" placeholder="*Ваш вопрос"></textarea>
+	</div>	
+	<div class="_frms__input _czr__frms__input">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">
+				<span class="cr"><i class="cr-icon icon-ok"></i></span>
+				<span class="text">Да, я даю согласие на обработку персональных данных</span> 
+			</label>
+		</div>
+	</div>	
+	<div class="_frms__input">
+		<img src="/img/default/notrobot.jpg" alt="">
+	</div>	
+	<div class="_frms__input">
+		<button type="submit" class="btn-site btn-line big btn-white">Отправить</button>
+	</div>	
+</form> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 
+		<div class="modal fade" id="modal-activity" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content _mf__content">
+			<div class="modal-body _mf__body" >
+				<div class="modal-block">
+					<div class="modal-heading"> 
+						<h3 class="modal-title">Бесплатное занятие</h3>
+						<button type="button" class="_mf__btn-close btn-site btn-close modal-btn-close" data-dismiss="modal" aria-hidden="true"></button>
+					</div>					
+					<form action="#">
+	<div class="_frms__input">
+		<input type="text" class="_frms__form-control form-control" id="" placeholder="*ФИО">
+	</div>	
+	<div class="_frms__input">
+		<input type="email" class="_frms__form-control form-control" id="" placeholder="*E-mail">
+	</div>	
+	<div class="_frms__input">
+		<input type="tel" class="_frms__form-control form-control" id="" placeholder="*Телефон">
+	</div>	
+	<div class="_frms__input _czr__frms__input">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">
+				<span class="cr"><i class="cr-icon icon-ok"></i></span>
+				<span class="text">Да, я даю согласие на обработку персональных данных</span> 
+			</label>
+		</div>
+	</div>	
+	<div class="_frms__input">
+		<img src="/img/default/notrobot.jpg" alt="">
+	</div>	
+	<div class="_frms__input">
+		<button type="submit" class="btn-site btn-line big btn-white">Отправить</button>
+	</div>	
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> 		
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

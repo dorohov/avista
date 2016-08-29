@@ -1,4 +1,4 @@
-/* //
+//
 // Modals
 // --------------------------------------------------
 
@@ -9,57 +9,36 @@
 
 // Kill the scroll on the body
 .modal-open {
-  overflow: hidden;
+	overflow: hidden;
 }
-
-// Container that the modal scrolls within
 .modal {
-  display: none;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: @zindex-modal;
-  -webkit-overflow-scrolling: touch;
-  contain: strict;
-
-  // Prevent Chrome on Windows from adding a focus outline. For details, see
-  // https://github.com/twbs/bootstrap/pull/10951.
-  outline: 0;
-
-  // When fading in the modal, animate it to slide down
-  &.fade .modal-dialog {
-	.translate(0, -25%);
-	.transition-transform(~"0.3s ease-out");
-  }
-  &.in .modal-dialog { .translate(0, 0) }
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: @zindex-modal;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	&.fade .modal-dialog {
+		.translate(0, -25%);
+		.transition-transform(~"0.3s ease-out");
+	}
+	&.in .modal-dialog { .translate(0, 0%) }
+	@media @media-screen{
+		&.fade .modal-dialog {.translate(0, 0%);}
+		&.in .modal-dialog { .translate(0, 20%) }
+	}
+	@media @media-size-lg {
+		&.in .modal-dialog { .translate(0, 5%) }
+	}
 }
 .modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
-
-// Shell div to position the modal with bottom padding
-.modal-dialog {
-	position: fixed;
-	min-height: 100%;
-	min-width: 100%;
-	//background: url("@{url-path-img}/maket/1920/clients3.jpg") no-repeat top center;
-}
-
-// Actual modal
-.modal-content {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;	
-	outline: 0;
-	//opacity: 0.7;
-}
-// Modal background
 .modal-backdrop {
 	position: fixed;
 	top: 0;
@@ -70,35 +49,52 @@
 	background-color: @modal-backdrop-bg;
 	// Fade for backdrop
 	&.fade { .opacity(0); }
-	&.in { .opacity(@modal-backdrop-opacity); }
+	&.in { .opacity(0.90); }
+
+}
+.modal-dialog {
+	position: relative;
+	@media @media-size-xs 	{width: auto;	margin: 10px;}  
+	@media @media-size-sm 	{width: 600px;	margin: 10px auto;}  
+	@media @media-screen 	{width: 670px;	margin: 0px auto;}  
+}
+.modal-content {
+	position: relative;
+	outline: 0;
+}
+.modal-body {
+	position: relative;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 30px 50px;
+	background: @white;
+	border-radius: 15px;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	@media @media-size-xs{padding: 25px;}	
+	@media @media-size-sm{padding: 30px 40px;}	
 }
 
 // Title text within header
+.modal-heading{
+	position: relative;	
+	margin-bottom: 25px;	
+	@media @media-size-xs 	{padding-top: 50px; text-align: center;}
+	@media @media-notsmart 	{padding-right: 35px;}
+}
 .modal-title {
-	font-size: 36px;
-	line-height: 46px;
-	font-family: @calibri-light;
-	@media @media-size-xs{
-		font-size: 26px;
-		line-height: 36px;
-	}
+	@media @media-screen	{font-size: @b-fs + 18px; line-height: @b-lh + 14px;} 	// 36/40
+	@media @media-size-xs	{font-size: @b-fs + 8px; line-height: @b-lh + 4px;} 	// 26/30
+	@media @media-size-sml	{font-size: @b-fs + 16px; line-height: @b-lh + 12px;} 	// 34/38
 }
 .modal-btn-close{
 	position: absolute;
 	top: 5px;
 	right: 0px;
+	@media @media-size-xs 	{top: 0; right: 50%; transform: translateX(50%);}
 }
-// Modal body
-// Where all modal content resides (sibling of .modal-header and .modal-footer)
-.modal-body {
-	position: relative;
-	display: flex;
-	width: 100%;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
-}
-
 // Measure scrollbar width for padding body during modal show/hide
 .modal-scrollbar-measure {
   position: absolute;
@@ -108,177 +104,30 @@
   overflow: scroll;
 }
 
-custom styles
-modal enter
-._me__content{
-	background: url("@{url-path-img}/bg/bg-enter.jpg") no-repeat center;
-}
-._me__body{
-	justify-content: center;
-	align-items: center;
-}
-._me__block{
-	width: 640px;
-	height: 315px;
-	@media @media-size-xs{
-		width: 100%;
-		height: auto;
-		padding: 0 20px;
+//custom styles
+.modal-block{
+	width: 100%;
+	._frms__form-control{
+		border: 1px solid @green-brilliant;
+		&:focus{
+			border: 1px solid lighten(@black, 30%);
+			color: lighten(@black, 30%);
+		    &:-moz-placeholder{color: lighten(@black, 30%);}
+			&::-webkit-input-placeholder {color: lighten(@black, 30%);}
+		}		
 	}
-}
-._me__heading{
-	position: relative;
-	.modal-btn-close{
-		@media @media-size-xs{top: 50%; transform: translateY(-50%);}
-	}
-}
-._me__title{
-	padding-right: 60px;
-	margin-bottom: 50px;
-	@media @media-size-xs {
-		margin-bottom: 25px;
-	}
-}
-._me__form-item{
-	position: relative;
-	margin-bottom: 25px;
-	&.pass{
-		._me__form-control{padding-right: 130px;}
-	}
-}
-._me__form-control{
-	background: none;
-	color: @white;
-	border-bottom: 1px solid @blue-light;
-	height: 49px;
-	padding: 5px 0;
-	font-size: 24px;
-	line-height: 24px;
-	color: #9f9f9f;
-	border-radius: 0;
-	&::-webkit-input-placeholder {
-		font-size: 24px;
-		line-height: 24px;
-		color: #9f9f9f;
-		.transition(~"all ease-in-out .15s");
-	}
-	&:-moz-placeholder {
-		font-size: 24px;
-		line-height: 24px;
-		color: #9f9f9f;
-		.transition(~"all ease-in-out .15s");
-	}
-	&:focus{
-		border-bottom: 1px solid @white;
-		color: @white;
-		&::-webkit-input-placeholder {
-			color: @white;
-		}
-		&:-moz-placeholder {
+	.btn-white{
+		color: @green-brilliant;
+		border-color: @green-brilliant;
+		&:hover{
+			background: @green-brilliant;
 			color: @white;
 		}
 	}
-}
-._me__form-pass{
-	position: absolute;
-	right: 0;
-	top: 50%;
-	font-size: 17px;
-	text-decoration: underline;
-	transform: translateY(-50%);
-	color: @blue-light;
-	&:hover{
-		text-decoration: none;
-		color: @blue-light;
+	._frms__input{
+		&:last-child{text-align: center; margin-bottom: 0}
 	}
 }
 ._me__form-btn{
-	padding-top: 15px;
+	padding-top: 25px;
 }
-modal form
-._mf__content{background: @b-html-bg;}
-._mf__body{
-	overflow: auto;
-	background: @b-body-bg;
-}
-._mf__block{
-	margin: auto;
-	width: 100%;
-    max-width: 1570px;
-    padding: 20px 30px;
-}
-._mf__heading{
-	position: relative;
-	@media @media-size-xs{
-		padding-top: 45px;
-	}
-}
-._mf__title{
-	@media @media-size-xs{
-		font-size: 24px;
-		line-height: 30px;
-		text-align: center;
-	}
-
-}
-._mf__btn-close{
-	@media @media-size-xs{
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translate(-50%, 0);
-	}
-}
-._mf__title{letter-spacing: 2px;}
-._mf__note{
-	font-size: 16px;
-	font-family: @calibri;
-	margin-bottom: 60px;
-	@media @media-size-xs{text-align: center; margin-bottom: 25px;}
-	@media @media-size-sm{margin-bottom: 35px;}
-	@media @media-size-lg{margin-bottom: 45px;}
-}
-._mf__row{
-	flex-wrap: wrap;
-}
-._mf__cols{
-	margin-bottom: 30px;
-	@media @media-size-xs-p{width: 100%;}
-}
-._mf__btn{
-	margin-top: 40px;
-	@media @media-device{margin-top: 25px;}
-}
-modal video
-._mv__content{}
-._mv__body{}
-._mv__block{
-	position: relative;
-    padding: 40px;
-    width: 500px;
-    height: 350px;
-    //margin: auto;
-	@media @media-size-xs{
-		padding: 50px 20px;
-	}
-    iframe{
-    	width: 100%;
-    	height: 100%;
-    }
-    .modal-btn-close{
-		@media @media-size-xs{
-			top: 0;
-			left: 50%;    
-			transform: translateX(-50%);
-		}
-    }
-}
-modal message
-._mm__content{}
-._mm__body{}
-._mm__block{
-	background: @b-html-bg;    
-	width: 100%;
-    max-width: 500px;
-    padding: 25px 30px;
-} */

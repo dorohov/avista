@@ -2,6 +2,15 @@
 	background: @b-nav-bg;
 	box-shadow: 0 4px 11px fadeout(@black, 83%);  
 	//opacity: @opacity;
+	@media @media-device{
+		transition: @transition-site;
+		&.open-sidebar{
+			top: 0!important;
+			.navbar-collapse{
+				left: 0;
+			}
+		}
+	}
 }
 .navbar-header{
 	@media @media-device{

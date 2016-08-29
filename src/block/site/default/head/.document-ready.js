@@ -25,6 +25,13 @@ $('.navbar-site .dropdown').hover(
 		$(this).removeClass('open');
 	}
 );
+/*
+$('.navbar-collapse').on('shown.bs.collapse', function () {
+	$('.navbar-site').addClass('open');
+});
+$('.navbar-collapse').on('hidden.bs.collapse', function () {
+	$('.navbar-site').removeClass('open');
+});*/
 //$(".count-list li").contents().wrap('<span></span>');
 $('._ipc__slider').owlCarousel({
 	margin: 0,
@@ -58,11 +65,12 @@ $('.teachers-list').owlCarousel({
 	} 
 }); 
 //parallax
-var left = 0, top = 0, 
+/*
+var left = 0, top = 0,  
 	element = $('.parallax__for-peoples'),
 	element1 = $('.header-site');
 	
-if(element1.length){
+if(element.length){
 	var offset =  { left: element.offset().left, top: element.offset().top };
 	element.bind('mousemove', function(e){
 		left = (e.pageX-offset.left);
@@ -77,7 +85,7 @@ if(element1.length){
 		top = (e.pageY-offset1.top);
 	  	$(this).css({backgroundPosition   : '-'+(0.03*left)+'px top'});
 	});
-};
+};*/
 /*
 $('iframe').removeAttr("frameborder");
 $('#getModal').click(function(){
