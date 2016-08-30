@@ -1,6 +1,6 @@
 $('img').addClass('img-responsive');
 $('.text-block ul').addClass('ul-site');
-var url = window.location.pathname;
+var url = window.location.href;
 $('.navbar-nav a[href="'+url+'"]').parent().addClass('active'); 
 $('._fs__navbar a[href="'+url+'"]').parent().addClass('active'); 
 $('.tabs-site a[href="'+url+'"]').parent().addClass('active'); 
