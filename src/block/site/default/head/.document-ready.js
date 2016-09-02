@@ -5,9 +5,14 @@ $('.navbar-nav a[href="'+url+'"]').parent().addClass('active');
 $('._fs__navbar a[href="'+url+'"]').parent().addClass('active'); 
 $('.tabs-site a[href="'+url+'"]').parent().addClass('active'); 
 $('.services-dropdown .dropdown-menu a[href="'+url+'"]').parent().addClass('active'); 
+/*
 if(url != "/"){
 	$('<li><a href="/">Главная</a></li>').prependTo($('.navbar-nav'));
-}
+}*/
+
+//var SVG = document.getElementById('service-svg').getSVGDocument();
+//var EL = SVG.getElementsByClassName('svg-item1');
+
 $('.text-block table').addClass('table table-bordered');
 $('._sppc__item').hover(
 	function(){
@@ -15,6 +20,17 @@ $('._sppc__item').hover(
 	},
 	function(){
 		$(this).removeClass('active');
+	}
+);
+
+$('._ipc__services-item').hover(
+	function(){
+		var svgTarget = $(this).attr('data-target');
+		$(svgTarget).attr('data-hover', 'onhover');
+	},
+	function(){
+		var svgTarget = $(this).attr('data-target');
+		$(svgTarget).attr('data-hover', ' ');
 	}
 );
 $('.navbar-site .dropdown').hover(
@@ -25,14 +41,6 @@ $('.navbar-site .dropdown').hover(
 		$(this).removeClass('open');
 	}
 );
-/*
-$('.navbar-collapse').on('shown.bs.collapse', function () {
-	$('.navbar-site').addClass('open');
-});
-$('.navbar-collapse').on('hidden.bs.collapse', function () {
-	$('.navbar-site').removeClass('open');
-});*/
-//$(".count-list li").contents().wrap('<span></span>');
 $('._ipc__slider').owlCarousel({
 	margin: 0,
 	loop: true,
@@ -86,14 +94,6 @@ if(element1.length){
 	  	$(this).css({backgroundPosition   : '-'+(0.03*left)+'px top'});
 	});
 };*/
-/*
-$('iframe').removeAttr("frameborder");
-$('#getModal').click(function(){
-	$('#modal-enter').modal('hide');
-	setTimeout(function() {$('#modal-pass').modal('show');}, 500)
-	return false;
-});
- */
 $('.fancybox').fancybox({
 	prevEffect : 'none',
 	nextEffect : 'none',

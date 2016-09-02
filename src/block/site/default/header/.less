@@ -1,9 +1,10 @@
 .header-site{	
 	position: relative;
 	background-repeat: no-repeat;
-	background-position: 0 top;
+	background-position: top right;
 	background-size: cover;
 	transition: 0.15s all linear;
+	@media @media-size-xs {background-position: 0 top;}
 	@media @media-size-sm {background-position: right top;}
 	@media @media-size-sm-p{background-position: 60% top;}	
 	&.icons{
