@@ -1015,6 +1015,17 @@ textarea._frms__form-control{
 }
 
 .navbar-brand{
+	@media @media-device{
+		.base{display: none;}
+		.white{}
+	}
+	@media @media-screen{
+		.base{}
+		.white{display: none;}
+	}
+	.__heading{}
+		.__small{}
+	/*
 	color: @logo;
 	font-family: @dax-thin;
 	position: relative;
@@ -1048,7 +1059,7 @@ textarea._frms__form-control{
 		@media @media-device {background: url('@{url-path-img}/default/logotip-white.png') no-repeat center;}
 		@media @media-screen {background: url('@{url-path-img}/default/logotip.png') no-repeat center;}
 	}
-	&:hover{color: @logo;}
+	&:hover{color: @logo;}*/
 }
 .navbar-slogan{
 	font-family: @hel-light;
@@ -2432,6 +2443,7 @@ textarea._frms__form-control{
 	top: -20px;
 	left: 50%;
 	transform: translateX(-50%);
+	@media @media-device{display: none;}
 	.__heading,
 	.__small{
 		font-family: @dax;
