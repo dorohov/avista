@@ -216,6 +216,14 @@
 			background: none;
 			transition: @transition-site;
 			letter-spacing: 0.8px;
+			position: relative;
+			.caret{
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				transform: translateY(-50%);
+				@media @media-device{right: 0}
+			}
 			&:hover,
 			&:focus {
 				background: none;
@@ -228,11 +236,9 @@
 			@media @media-device{
 				display: inline-block;
 				padding-left: 0;
-				padding-right: 0;
 			}
 			@media @media-screen{
-				padding: 15px 20px;
-				//border-bottom: 2px solid fadeout(@white, 100%);
+				padding: 15px 35px 15px 20px;
 			}
 		}
 		&.active{
@@ -290,6 +296,9 @@
 						top: 50%;
 						left: -35px;    
 						transform: translateY(-45%);
+						@media @media-device {
+							background: url('@{url-path-img}/default/marker-white.png') no-repeat center;
+						}
 					}
 					&:hover{
 						background: none;

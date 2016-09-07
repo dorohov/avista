@@ -1140,6 +1140,14 @@ textarea._frms__form-control{
 			background: none;
 			transition: @transition-site;
 			letter-spacing: 0.8px;
+			position: relative;
+			.caret{
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				transform: translateY(-50%);
+				@media @media-device{right: 0}
+			}
 			&:hover,
 			&:focus {
 				background: none;
@@ -1152,11 +1160,9 @@ textarea._frms__form-control{
 			@media @media-device{
 				display: inline-block;
 				padding-left: 0;
-				padding-right: 0;
 			}
 			@media @media-screen{
-				padding: 15px 20px;
-				//border-bottom: 2px solid fadeout(@white, 100%);
+				padding: 15px 35px 15px 20px;
 			}
 		}
 		&.active{
@@ -1214,6 +1220,9 @@ textarea._frms__form-control{
 						top: 50%;
 						left: -35px;    
 						transform: translateY(-45%);
+						@media @media-device {
+							background: url('@{url-path-img}/default/marker-white.png') no-repeat center;
+						}
 					}
 					&:hover{
 						background: none;
@@ -2503,12 +2512,26 @@ textarea._frms__form-control{
 ._ipc__slider-item{
 	height: 520px;
 	background-position: top center;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;	
+    &.left{background-position: left top;}
+    &.center{background-position: center top;}
+    &.right{background-position: right top;}
+    &.center-right{background-position: 75% top;}
     @media @media-size-xs{
     	height: 400px;
     	background-size: cover !important;
+	    &.left-xs{background-position: left top;}
+	    &.center-xs{background-position: center top;}
+	    &.right-xs{background-position: right top;}
+	    &.center-right-xs{background-position: 75% top;}
     }
     @media @media-size-xs-l{height: 300px;}
+    @media @media-size-sm{    	
+	    &.left-sm{background-position: left top;}
+	    &.center-sm{background-position: center top;}
+	    &.right-sm{background-position: right top;}
+	    &.center-right-sm{background-position: 75% top;}
+    }
 }
 ._ipc__slider-item-inner{
 	position: relative;

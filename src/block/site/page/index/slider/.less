@@ -20,12 +20,26 @@
 ._ipc__slider-item{
 	height: 520px;
 	background-position: top center;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;	
+    &.left{background-position: left top;}
+    &.center{background-position: center top;}
+    &.right{background-position: right top;}
+    &.center-right{background-position: 75% top;}
     @media @media-size-xs{
     	height: 400px;
     	background-size: cover !important;
+	    &.left-xs{background-position: left top;}
+	    &.center-xs{background-position: center top;}
+	    &.right-xs{background-position: right top;}
+	    &.center-right-xs{background-position: 75% top;}
     }
     @media @media-size-xs-l{height: 300px;}
+    @media @media-size-sm{    	
+	    &.left-sm{background-position: left top;}
+	    &.center-sm{background-position: center top;}
+	    &.right-sm{background-position: right top;}
+	    &.center-right-sm{background-position: 75% top;}
+    }
 }
 ._ipc__slider-item-inner{
 	position: relative;
