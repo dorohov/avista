@@ -935,6 +935,7 @@ textarea._frms__form-control{
 			}
 		}
 	}
+	@media @media-screen {z-index: 20}
 }
 .navbar-header{
 	@media @media-device{
@@ -1134,13 +1135,14 @@ textarea._frms__form-control{
 			width: 100%;
 		}
 		> a{
-			font-size: 16px;
+			font-size: 15px;
 			color: @white; 
 			text-transform: uppercase; 
 			background: none;
 			transition: @transition-site;
 			letter-spacing: 0.8px;
 			position: relative;
+			@media @media-size-lg{font-size: 14px;}
 			.caret{
 				position: absolute;
 				right: 15px;
@@ -1162,7 +1164,15 @@ textarea._frms__form-control{
 				padding-left: 0;
 			}
 			@media @media-screen{
-				padding: 15px 35px 15px 20px;
+				padding: 15px 20px 15px 20px;
+			}
+		}
+		&.dropdown{
+			> a{
+				@media @media-screen{
+					padding: 15px 35px 15px 20px;
+				}
+
 			}
 		}
 		&.active{
@@ -1197,12 +1207,12 @@ textarea._frms__form-control{
 			border-radius: 0;
 			box-shadow: 0 4px 11px fadeout(@black, 83%); 
 			@media @media-device{padding: 10px 25px;}
-			li{
+			> li{
 				margin-bottom: 5px;
-				a{
+				> a{
 					text-transform: uppercase;
 					color: @black;
-					font-size: 16px;
+					font-size: 15px;
 					display: inline-block;
 					padding: 5px 0 0; 
 					margin-left: 35px;
@@ -1210,7 +1220,8 @@ textarea._frms__form-control{
 					border-bottom: 1px solid fadeout(@aquamarine, 100%);
 					position: relative;
 					transition: @transition-site;
-					@media @media-device{color: @white}
+					@media @media-device{color: @white; padding: 5px 15px!important;}
+					@media @media-size-lg{font-size: 14px;}
 					&:before{
 						content: '';
 						width: 16px;
@@ -1378,6 +1389,13 @@ textarea._frms__form-control{
 			z-index: 2;
 		}
 	}
+}
+.news-item__time{
+	font-size: 13px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #8a8a8a;
 }
 .news-item__heading{
 	font-family: @hel-med;
@@ -2491,7 +2509,8 @@ textarea._frms__form-control{
 	}
 }
 ._ipc__slider{
-	//opacity: @opacity;	
+	//opacity: @opacity;
+	box-shadow: 0 1px 10px rgba(0,0,0,0.5);	
 	&.owl-carousel{
 		.owl-controls{
 			.owl-dots {

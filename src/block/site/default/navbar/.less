@@ -11,6 +11,7 @@
 			}
 		}
 	}
+	@media @media-screen {z-index: 20}
 }
 .navbar-header{
 	@media @media-device{
@@ -210,13 +211,14 @@
 			width: 100%;
 		}
 		> a{
-			font-size: 16px;
+			font-size: 15px;
 			color: @white; 
 			text-transform: uppercase; 
 			background: none;
 			transition: @transition-site;
 			letter-spacing: 0.8px;
 			position: relative;
+			@media @media-size-lg{font-size: 14px;}
 			.caret{
 				position: absolute;
 				right: 15px;
@@ -238,7 +240,15 @@
 				padding-left: 0;
 			}
 			@media @media-screen{
-				padding: 15px 35px 15px 20px;
+				padding: 15px 20px 15px 20px;
+			}
+		}
+		&.dropdown{
+			> a{
+				@media @media-screen{
+					padding: 15px 35px 15px 20px;
+				}
+
 			}
 		}
 		&.active{
@@ -273,12 +283,12 @@
 			border-radius: 0;
 			box-shadow: 0 4px 11px fadeout(@black, 83%); 
 			@media @media-device{padding: 10px 25px;}
-			li{
+			> li{
 				margin-bottom: 5px;
-				a{
+				> a{
 					text-transform: uppercase;
 					color: @black;
-					font-size: 16px;
+					font-size: 15px;
 					display: inline-block;
 					padding: 5px 0 0; 
 					margin-left: 35px;
@@ -286,7 +296,8 @@
 					border-bottom: 1px solid fadeout(@aquamarine, 100%);
 					position: relative;
 					transition: @transition-site;
-					@media @media-device{color: @white}
+					@media @media-device{color: @white; padding: 5px 15px!important;}
+					@media @media-size-lg{font-size: 14px;}
 					&:before{
 						content: '';
 						width: 16px;
