@@ -1,5 +1,6 @@
 ._ipc__slider{
-	//opacity: @opacity;	
+	//opacity: @opacity;
+	box-shadow: 0 1px 10px rgba(0,0,0,0.5);	
 	&.owl-carousel{
 		.owl-controls{
 			.owl-dots {
@@ -20,13 +21,31 @@
 ._ipc__slider-item{
 	height: 520px;
 	background-position: top center;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;	
+    &.left{background-position: left top;}
+    &.center{background-position: center top;}
+    &.right{background-position: right top;}
+    &.center-right{background-position: 75% top;}
     @media @media-size-xs{
     	height: 400px;
     	background-size: cover !important;
+	    &.left-xs{background-position: left top;}
+	    &.center-xs{background-position: center top;}
+	    &.right-xs{background-position: right top;}
+	    &.center-right-xs{background-position: 75% top;}
     }
     @media @media-size-xs-l{height: 300px;}
+<<<<<<< HEAD
     @media @media-size-sm{background-size: cover !important;}
+=======
+    @media @media-size-sm{    	
+		background-size: cover !important;
+	    &.left-sm{background-position: left top;}
+	    &.center-sm{background-position: center top;}
+	    &.right-sm{background-position: right top;}
+	    &.center-right-sm{background-position: 75% top;}
+    }
+>>>>>>> 536afe84c78df0add2dfebb04e7961a00a90d292
 }
 ._ipc__slider-item-inner{
 	position: relative;
@@ -57,7 +76,7 @@
 		font-size: 16px;
 		line-height: 22px;
     }
-    @media @media-device{background: @white !important;}
+    @media @media-device{background: fadeout(@white, 15%) !important;}
 }
 ._ipc__slider-item-heading{
 	font-size: 40px;
