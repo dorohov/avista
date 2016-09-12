@@ -25,12 +25,22 @@ $('._sppc__item').hover(
 
 $('._ipc__services-item').hover(
 	function(){
+		var ieotstoi = $('html').hasClass('msie');
 		var svgTarget = $(this).attr('data-target');
-		$(svgTarget).attr('data-hover', 'onhover');
+		if(ieotstoi){
+			$(svgTarget).attr('transform', 'translate(100 100) scale(1.16) translate(-120 -120)');
+		} else{
+			$(svgTarget).attr('data-hover', 'onhover');
+		}
 	},
 	function(){
+		var ieotstoi = $('html').hasClass('msie');
 		var svgTarget = $(this).attr('data-target');
-		$(svgTarget).attr('data-hover', ' ');
+		if(ieotstoi){
+			$(svgTarget).attr('transform', ' ');			
+		} else{
+			$(svgTarget).attr('data-hover', ' ');
+		}
 	}
 );
 $('.navbar-site .dropdown').hover(
