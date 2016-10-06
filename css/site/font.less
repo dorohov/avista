@@ -9,6 +9,7 @@
 @dax-thin: 		DaxlinePro-Thin;
 
 @icon: 				Flaticon;
+@icon2: 			Flaticon-igm;
 .include-custom-font(@family: @hel, @weight: normal, @style: normal){
 	@font-face{			
 		font-family: "@{family}";			
@@ -35,6 +36,7 @@
 .include-custom-font(@family: @dax-thin, 	@weight: normal, @style: normal);
 /*end's dax*/
 .include-custom-font(@family: @icon, 			@weight: normal, @style: normal);
+.include-custom-font(@family: @icon2, 			@weight: normal, @style: normal);
 
 @icon-add: 			"\f100";
 @icon-close: 		"\f101";
@@ -54,6 +56,7 @@
 @icon-tw: 			"\f10f";
 @icon-up: 			"\f110";
 @icon-vk: 			"\f111";
+@icon-igm: 			"\f100";
 
 .icon-tick{&:before{content: @icon-tick; font-family: @icon;}}
 .icon-remove{&:before{content: @icon-remove; font-family: @icon;}}
