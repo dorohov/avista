@@ -3,7 +3,7 @@
 		opacity:0;
 		z-index:-1;
 		bottom:120%;
-		right:5%;
+		left:5%;
 		content:'';
 		display:inline-block;
 		width:1px;
@@ -172,6 +172,38 @@
 		padding-right: 5px;
 	}
 } 
+._fs__liz-cols{
+	@media @media-size-xs{
+		width: 100%;
+	}
+
+}
+.liz-block{
+	border: 1px solid @white;
+	display: block;
+	padding: 20px 120px 20px 20px;
+	position: relative;
+	transition: @transition-site;
+	@media @media-size-xs{
+		max-width: 250px;
+		margin: 0 auto 20px;
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 20px;
+		width: 80px;
+		height: 70px;
+		background-image: url('@{url-path-img}/default/liz.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&:hover{
+		background: @white;
+		color: #5eb885!important;
+	}	
+}
 .for-peoples-site{
 	margin-top: 105px;
 	position: relative;
@@ -278,6 +310,7 @@
 		}		
 	}
     @media @media-size-xs{
+    	padding-bottom: 320px;
     	padding-top: 30px;
     	margin-top: 0;
     }
