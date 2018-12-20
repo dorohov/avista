@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('blocks/head.html', {"title": "Menu"})
+</head>
+<body>
+	@@include('blocks/navbar.html', {
+		"top_items": {
+			"item1": {
+				"title": "О нас",
+				"url": "#",
+				"dropdown": [
+					{
+						"title": "Пункт 1",
+						"url": "#"
+					},
+					{
+						"title": "Пункт 2",
+						"url": "#"
+					},
+					{
+						"title": "Пункт 3",
+						"url": "#"
+					},
+					{
+						"title": "Пункт 4",
+						"url": "#"
+					},
+					{
+						"title": "Пункт 5",
+						"url": "#"
+					},
+					{
+						"title": "Пункт 6",
+						"url": "#"
+					}
+				]
+			}
+		}
+	})
+</body>
+</html>

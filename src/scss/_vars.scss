@@ -1,0 +1,22 @@
+$menu_container_width:                  1550px;
+$menu_items_padding:                    30px;
+$menu_items_padding_md:                 10px;
+
+$color_menu_top_items:                #ffffff;
+$font-size_menu_top_items:              14px;
+$font-size_menu_top_items_md:           12px;
+$menu_top_height:                       50px;
+
+$color_menu_bottom_items:             #ffffff;
+$font-size_menu_bottom_items:           $font-size_menu_top_items;
+$font-size_menu_bottom_items_md:        $font-size_menu_top_items_md;
+$menu_bottom_height:                    $menu_top_height;
+
+$menu_mobile_heiht:                     $menu_top_height;
+
+$resp1920:                              1920px;
+$resp1400:                              1400px;
+$resp1200:                              1200px;
+$resp1025:                              1025px;
+$resp768:                               768px;
+$resp320:                               320px;

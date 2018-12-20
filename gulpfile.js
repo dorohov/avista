@@ -9,13 +9,16 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),            // Сжатие изображений
     fileInclude = require('gulp-file-include'),     // Include HTML файлов с передачей параметров
     browserSync = require('browser-sync').create(), // Автообновление браузера
-    plumber = require('gulp-plumber');              // 
+    plumber = require('gulp-plumber'),              // 
+    concat = require('gulp-concat'),
+    sourcemaps = require('gulp-sourcemaps');
 
     var assets = {
         sass:       'src/scss/*.scss',
         svg:        'src/svg/*.svg',
         images:     'src/images/*',
-        html:       'src/html/*.html'
+        html:       'src/html/*.html',
+        js:         'src/js/*.js'
     }
 
 /*
@@ -62,6 +65,15 @@ function html() {
                 .on('end', browserSync.reload)
 }
 
+function js() {
+    return gulp.src(assets.js)
+                .pipe(sourcemaps.init())
+                .pipe(concat('main.js'))
+                .pipe(sourcemaps.write())
+                .pipe(gulp.dest('dist/js'))
+                .on('end', browserSync.reload)
+}
+
 /*
 *   1. browserSync
 */
@@ -78,16 +90,18 @@ gulp.task('css', css)
 gulp.task('svgMap', svgMap)
 gulp.task('imageMinify', imageMinify)
 gulp.task('html', html)
+gulp.task('js', js)
 gulp.task('browser_sync', browser_sync)
 
 gulp.task('build', function() {
-    gulp.watch(assets.html, gulp.series('html'))
+    gulp.watch('src/html/**/*.html', gulp.series('html'))
     gulp.watch(assets.sass, gulp.series('css'))
+    gulp.watch(assets.js, gulp.series('js'))
     gulp.watch(assets.svg, gulp.series('svgMap'))
     gulp.watch(assets.images, gulp.series('imageMinify'))
 })
 
 gulp.task('default', gulp.series(
-    gulp.parallel('html', 'css', 'svgMap', 'imageMinify'),
+    gulp.parallel('html', 'css', 'js', 'svgMap', 'imageMinify'),
     gulp.parallel('build', 'browser_sync')
 ))

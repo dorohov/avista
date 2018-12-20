@@ -1,0 +1,50 @@
+@media (max-width: $menu_container_width) {
+    .navbar {
+        &__top,
+        &__bottom {
+            &__menu {
+                ul {
+                    li {
+                        a {
+                            padding: 0 $menu_items_padding_md;
+                        }
+                    }
+                }
+            }
+        }
+        &__bottom {
+            &__right {
+                padding-right: $menu_items_padding_md;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1200) {
+    .navbar {
+        &__top,
+        &__bottom {
+            &__menu {
+                ul {
+                    li {
+                        a {
+                            font-size: $font-size_menu_top_items_md;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .navbar {
+        &__top,
+        &__bottom {
+            display: none;
+        }
+        &__mobile {
+            display: block;
+        }
+    }
+}
