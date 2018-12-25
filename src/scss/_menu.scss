@@ -101,6 +101,25 @@
 						&:hover {
 							background: rgba(#fff, .2);
 						}
+						&._dropdown-link {
+							&::after {
+								content: url(../../img/dropdown_arrow.svg);
+								top: 50%;
+								margin-top: -5px;
+								margin-left: 4px;
+								transition: .25s all ease;
+							}
+						}
+					}
+				}
+				._dropdown-box {
+					li {
+						height: auto;
+						a {
+							padding: 10px 15px 10px 60px;
+							font-size: 14px;
+							white-space: nowrap;
+						}
 					}
 				}
 			}
@@ -123,6 +142,11 @@
 						}
 					}
 				}
+			}
+		}
+		._dropdown {
+			&-box {
+
 			}
 		}
 	}
